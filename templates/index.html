@@ -1,0 +1,336 @@
+{% load static %} {% static "img" as baseUrl %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  
+  
+  <title>Peace Technologies</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400"
+      rel="stylesheet"
+    />
+    <link href="{%static 'css/templatemo-style.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+	<style>
+    .btn-circle.btn-sm {
+      width: 30px;
+      height: 30px;
+      padding: 6px 0px;
+      border-radius: 15px;
+      font-size: 8px;
+      text-align: center;
+  }
+		.spec_offer
+{
+	position: absolute;
+	top: 15px;
+	left: 16px;
+	width: 118px;
+	height: 36px;
+	background: #181818;
+}
+.spec_offer a
+{
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	line-height: 36px;
+	font-weight: 400;
+}
+
+	</style>
+  </head>
+  <!--
+
+Simple House
+
+https://templatemo.com/tm-539-simple-house
+
+-->
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                </li>
+              
+                
+                <li class="nav-item">
+                  <button style="width: 250%;" id="cart" data-html="true" type="button" class="btn btn-warning btn-circle btn-sm" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+ <h4> Cart(0)</h4>
+</button>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Top box -->
+      <!-- Logo & Site Name -->
+      <div class="placeholder">
+        <div
+          class="parallax-window"
+          data-parallax="scroll"
+          data-image-src="img/simple-house-01.jpg"
+        >
+          <div class="tm-header">
+            <div class="row tm-header-inner">
+              <div class="col-md-6 col-12">
+				  <img src="https://cdn.trendhunterstatic.com/thumbs/foodie-app.jpeg" alt="imgs"/>
+                <img
+                  src="{%static 'img/simple-house-logo.png' %}"
+                  alt="Logo"
+                  class="tm-site-logo"
+                />
+
+                <div class="tm-site-text-box">
+                  <h1 class="tm-site-title">Peace Tech</h1>
+                  <h6 class="tm-site-description">new restaurant</h6>
+                </div>
+              </div>
+              <nav class="col-md-6 col-12 tm-nav">
+                <ul class="tm-nav-ul">
+                  <li class="tm-nav-li">
+                    <a href="" class="tm-nav-link active">Home</a>
+                  </li>
+                  {% if user.is_authenticated %}
+                  <li class="tm-nav-li">
+                   Hello, {{user.username}}
+                  </li>
+                  <li class="tm-nav-li">
+                    <a href="accounts/logout" class="tm-nav-link">Logout</a>
+                  </li>
+                  
+                  {% else %}
+                  <li class="tm-nav-li">
+                    <a href="accounts/register" class="tm-nav-link">Login/Register</a>
+                  </li>
+                  <li class="tm-nav-li">
+                    <a href="contact.html" class="tm-nav-link">Contact</a>
+                  </li>
+                  {% endif %}
+                 
+                  
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <header class="row tm-welcome-section">
+          <h2 class="col-12 text-center tm-section-title">
+            Welcome to Peace Tech House
+          </h2>
+          <p class="col-12 text-center">
+			Food contains the nutrition that people and animals need to be healthy. 
+			The consumption of food is normally enjoyable to humans. 
+			It contains protein, fat, carbohydrates, vitamins, water and minerals. 
+			Liquids used for energy and nutrition are often called "drinks".
+          </p>
+        </header>
+
+        <div class="tm-paging-links">
+          <nav>
+            <ul>
+              <li class="tm-paging-item">
+                <a href="pizza" class="tm-paging-link active">Pizza</a>
+              </li>
+              <li class="tm-paging-item">
+                <a href="salads" class="tm-paging-link active">Salad</a>
+              </li>
+              <li class="tm-paging-item">
+                <a href="noodles" class="tm-paging-link active">Noodle</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+		  
+<div class="container">
+	<div class="row">
+		{% for dest in dests %}
+	  <div class="col-sm-4">
+      {% if user.is_authenticated %}
+		<a href="{% url 'project' dest.id %}">
+		<img src="{{dest.img.url}}" alt="Image"/>
+	</a>
+  {% else %}
+  <a href="accounts/login">
+		<img src="{{dest.img.url}}" alt="Image"/>
+	</a>
+  {% endif %}
+	{% if dest.offer %}
+		<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+    {% endif %}
+		<h3 id="nm{{dest.id}}">{{dest.name}}</h3>
+		<p>{{dest.desc}}</p>
+		<button id="price{{dest.id}}" class="btn btn-success">{{dest.price}}</button>
+    <button  id="{{dest.id}}" class="btn atc btn-warning">Add to cart</button>
+		
+
+	  </div>
+	{% endfor %}
+	</div>
+  </div>
+        <!-- <div class="row tm-gallery">
+          {% for dest in dests %}
+          <div id="tm-gallery-page-pizza" class="tm-gallery-page">
+            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+              <figure>
+                <img
+                  src="{{dest.img.url}}"
+                  alt="Image"
+                  class="img-fluid tm-gallery-img"
+                />
+                <figcaption>
+                  <h4 class="tm-gallery-title">{{dest.name}}</h4>
+                  <p class="tm-gallery-description">{{dest.desc}}</p>
+                  <p class="tm-gallery-price">${{dest.price}}</p>
+                </figcaption>
+              </figure>
+			  <button type="button" class="btn btn-primary">Primary</button>
+            </article>
+          </div>
+          {% endfor %}
+        </div> -->
+
+        <!-- {% for dest in dests %}
+			
+				
+				<div id="tm-gallery-page-pizza" class="tm-gallery-page">
+					<article class="col-lg-3 col-md-6 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{{dest.img.url}}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">{{dest.name}}</h4>
+								<p class="tm-gallery-description">{{dest.desc}}</p>
+								<p class="tm-gallery-price">{{dest.price}}</p>
+							</figcaption>
+						</figure>
+					</article>
+					
+					
+					
+					
+			
+			</div>
+			{% endfor %} -->
+<br><br><br><br><br><br>
+        <div class="tm-section tm-container-inner">
+          <div class="row">
+            <div class="col-md-6">
+              <figure class="tm-description-figure">
+                <img
+                  src="{%static 'img/about-03.jpg' %}"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <div class="tm-description-box">
+                
+                <p class="tm-mb-45">
+					<h3>Weight Loss. One of the main reasons people eat a healthy diet is to maintain a healthy weight or to lose weight. ...
+					Heart Health. ...
+					Strong bones and teeth. ...
+					Better mood and energy levels. ...
+					Improved memory and brain health.
+				</h3>
+                </p>
+                
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  </body>
+  <script type="text/javascript">
+         console.log("This is working")
+
+      if(localStorage.getItem('cart')==null){
+        var cart={};
+      }
+      else{
+        cart = JSON.parse(localStorage.getItem('cart'));
+      }
+      $(document).on('click','.atc',function(){
+          console.log("button clcked")
+          var item_id = this.id.toString();
+          console.log(item_id)
+
+        if(cart[item_id]!=undefined){
+
+          quantity=cart[item_id][0]+1;
+          cart[item_id][0]=quantity;
+          cart[item_id][2]=cart[item_id][2]+parseFloat(document.getElementById("price"+item_id).innerHTML);
+        
+        }
+        else{
+          quantity=1;
+          if(document.getElementById("nm"+item_id) != null){
+          name=document.getElementById("nm"+item_id).innerHTML;}
+          
+          price=parseFloat(document.getElementById("price"+item_id).innerHTML)
+          cart[item_id]=[quantity,name,price] ;
+        }
+        console.log(cart);
+        localStorage.setItem('cart',JSON.stringify(cart));
+
+        document.getElementById("cart").innerHTML="Cart("+Object.keys(cart).length+")";
+        
+      });
+      
+      DisplayCart(cart);
+      function DisplayCart(cart){
+           var cartString="";
+           cartString+="<h4>This is my Cart</h4>";
+           var cartIndex=1;
+           for(var x in cart){
+
+           
+           if(document.getElementById("nm"+x) != null){
+            cartString+=cartIndex;
+            cartString+=document.getElementById("nm"+x).innerHTML + "Qty:"+cart[x][0]+"</br>";
+           cartIndex+=1;
+           }
+          
+          }
+          cartString+="<a href='/checkout'><button class='btn btn-warning' id='checkout'>CheckOut</button></a>";
+          document.getElementById("cart").setAttribute('data-content',cartString);
+          $('[data-toggle="popover"]').popover();
+      }
+  </script>
+</html>
